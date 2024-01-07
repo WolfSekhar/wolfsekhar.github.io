@@ -1,0 +1,14 @@
+body{
+    color: white;
+    background: linear-gradient(315deg, #5ebdf8, #249ae4);
+}
+
+
+#my-name{
+    font-size: 150px;
+    font-family :'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#my-occupation{
+    font-size: 70px;
+}
