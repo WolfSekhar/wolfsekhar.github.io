@@ -1,14 +1,47 @@
 body{
-    color: white;
-    background: linear-gradient(315deg, #5ebdf8, #249ae4);
+    color: rgb(42, 39, 39);
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
 }
 
+section{
+    margin-top: 30px;
+}
 
 #my-name{
-    font-size: 150px;
+    font-size: 170px;
     font-family :'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
 }
 
+#my-name-sub{
+    display: flex;
+}
+
+
 #my-occupation{
-    font-size: 70px;
+    font-size: 40px;
+    font-family :'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: bisque;
+    display: grid;
+    justify-items: left;
+}
+
+#title-container{
+    /* background: #000000; */
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+#main-logo{
+    /* background-color: aqua; */
+    align-self: center;
+}
+
+#welcome-text{
+    font-size: larger;
+}
+
+#about-text{
+    font-size: larger;
 }
