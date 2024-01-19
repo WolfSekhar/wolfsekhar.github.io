@@ -2,6 +2,9 @@ let container;
 let canvas;
 let x;
 let step;
+let colors;
+let dot_radius;
+let cindex;
 
 
 function setup() {
@@ -11,20 +14,35 @@ function setup() {
     canvas.parent(container);
     y = height/2;
     step = 1;
+
+    colors = ['black','#7851a9','orange','#1e90ff']
+    dot_radius = 25;
+
+    cindex = 0;
     
 }
 
 function draw(){
     background(255);
-    fill('black');
-    circle( width/6 ,y ,20);
+    dot(width/6,y,dot_radius,colors[cindex])
     
     y = y + step;
-    if (y >= height - 20) {
+    if (y >= height - dot_radius/2) {
         step = step * -1;
+        if(cindex < colors.length - 1){
+            cindex = cindex + 1;
+        }else{
+            cindex = 0;
+        }
     }else if(y <= height/2){
         step = step * -1;
     }
 
 
+}
+
+function dot(x,y,radius,color){
+    fill(color);
+    noStroke();
+    circle( x,y,radius);
 }
