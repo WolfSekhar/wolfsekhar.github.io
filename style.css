@@ -1,57 +1,97 @@
-body{
+body {
     color: rgb(42, 39, 39);
     background: linear-gradient(to bottom, #ffffff, #ffffff);
+    font-family: 'Roboto';
 }
+
 
 @font-face {
     font-family: 'ConcertOne';
     src: url(/library/ConcertOne-Regular.ttf);
 }
 
-section{
-    margin-top: 30px;
+section {
+    margin-top: 10px;
 }
 
-#dot{
-    margin-left: 10px;
+/* ********************************************************* */
+/* Section Name */
+/* ********************************************************* */
+#section-name {
+    margin: 1%;
 }
 
-#my-name{
-    font-size: 170px;
-    font-family :'ConcertOne','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#title-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    justify-items: center;
+}
+
+#my-name {
+    color: rgb(49, 47, 47);
+    max-width: 100%;
+    font-size: 28vw;
+    font-family: 'ConcertOne', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
 }
 
-#my-name-sub{
+#my-name-sub {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
+#dot {
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: 5%;
+}
 
-#my-occupation{
-    font-size: 40px;
-    font-family :'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#my-occupation {
+    font-size: 5vw;
+    font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: bisque;
-    width: fit-content;
-    padding: 20px;
-
+    font-weight: 500;
+    text-align: center;
 }
 
-#title-container{
-    /* background: #000000; */
+
+/* ********************************************************* */
+/* Section Welcome */
+/* ********************************************************* */
+#section-welcome{
+    margin: 3%;
+    margin-top: 10%;
     display: grid;
-    grid-template-columns: 1fr;
-
+    justify-items: center;
+}
+#img-welcome{
+    width: 20vw;
 }
 
-#main-logo{
-    /* background-color: aqua; */
-    align-self: center;
+#welcome-text {
+    margin-top: 50px;
+    font-size: 4vw;
+    text-align: center;
 }
 
-#welcome-text{
+/* ********************************************************* */
+/* Section About */
+/* ********************************************************* */
+#section-about{
+    margin: 3%;   
+}
+
+#about-me{
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+#about-text {
+    text-align: center;
+    margin-top: 50px;
     font-size: larger;
-}
-
-#about-text{
-    font-size: larger;
+    font-size: 4vw;
 }

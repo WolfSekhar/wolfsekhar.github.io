@@ -10,18 +10,28 @@ let colors;
 let dot_radius;
 let cindex;
 
+let mySubNameWidth;
+let mySubNameHeight;
+
 
 function setup() {
-    canvas = createCanvas(170,170);
+    
     container = document.getElementById('dot');
+    let mySubNameId = document.getElementById('my-name-sub');
+    mySubNameHeight = mySubNameId.offsetHeight;
+    mySubNameWidth = mySubNameId.offsetWidth;
+
+
+    canvas = createCanvas(170,mySubNameHeight/1.2);
     background(255);
     canvas.parent(container);
     frameRate(60);
 
+
     position = createVector(0,0);
     position.set(width/6,height/2);
 
-    velocity = createVector(1,0.1);
+    velocity = createVector(2,0.1);
 
     acceleration = createVector(0,0.1);
 
