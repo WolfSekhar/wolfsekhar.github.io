@@ -1,4 +1,5 @@
 
+// This is for the dot animation
 var sketchTwo = function (p) {
     p.setup = function () {
         p.container = document.getElementById('dot');
@@ -47,7 +48,8 @@ var sketchTwo = function (p) {
     function dot(x, y, radius, color) {
         p.fill(color);
         p.noStroke();
-        p.circle(x, y, radius);
+        //p.circle(x, y, radius);
+        p.square(x,y,radius/2);
     }
 
     function motion() {
@@ -69,6 +71,8 @@ var sketchTwo = function (p) {
 
 let s1 = new p5(sketchTwo);
 
+
+// this is for the atom animation
 var sketchOne = function (p) {
 
     p.setup = function () {
@@ -87,8 +91,10 @@ var sketchOne = function (p) {
 
         p.translate(p.width / 2, p.height / 2);
 
-        p.fill('#34495E ');
+    
+        p.fill('#616A6B');
         p.circle(0, 0, 30);
+        
 
         p.noStroke();
 
