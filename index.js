@@ -58,6 +58,9 @@ function dot(x,y,radius,color){
 function motion(position){
     position = position.add(velocity); // velocity
     velocity = velocity.add(acceleration); // acceleration
+
+    // limiting vector magnitude
+    velocity.limit(4);
 }
 
 function changeColor(){
