@@ -3,13 +3,22 @@ body{
     background: linear-gradient(to bottom, #ffffff, #ffffff);
 }
 
+@font-face {
+    font-family: 'ConcertOne';
+    src: url(/library/ConcertOne-Regular.ttf);
+}
+
 section{
     margin-top: 30px;
 }
 
+#dot{
+    margin-left: 10px;
+}
+
 #my-name{
     font-size: 170px;
-    font-family :'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family :'ConcertOne','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -22,8 +31,9 @@ section{
     font-size: 40px;
     font-family :'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: bisque;
-    display: grid;
-    justify-items: left;
+    width: fit-content;
+    padding: 20px;
+
 }
 
 #title-container{
