@@ -61,17 +61,21 @@ section {
 /* Section Welcome */
 /* ********************************************************* */
 #section-welcome{
-    margin: 3%;
     margin-top: 10%;
-    display: grid;
     justify-items: center;
+    display: grid;
 }
-#img-welcome{
-    width: 20vw;
+
+
+#welcome-anim{
+    justify-self: center;
+    justify-items: center;
+    align-self: center;
+    align-content: center;
 }
 
 #welcome-text {
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 4vw;
     text-align: center;
 }
@@ -91,7 +95,7 @@ section {
 
 #about-text {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: larger;
     font-size: 4vw;
 }
