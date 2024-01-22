@@ -109,7 +109,7 @@ var sketchOne = function (p) {
                 p.circle(-p.width/5,- p.height/5,12);
             }
         }
-        p.step = p.step + 1;
+        p.step = p.step + 0.7;
     }
 
 }
