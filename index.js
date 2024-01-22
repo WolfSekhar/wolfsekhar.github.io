@@ -19,9 +19,9 @@ var sketchTwo = function (p) {
 
         p.velocity = p.createVector(0, 0.1);
 
-        p.acceleration = p.createVector(0, 0.1);
+        p.acceleration = p.createVector(0, 0.2);
 
-        p.colors = ['black', '#7851a9', 'orange', '#1e90ff']
+        p.colors = ['black', '#7851a9', 'orange', '#1e90ff','#D35400', '#8E44AD','#DE3163','#CCCCFF','#E1C16E']
         p.dot_radius = 25;
 
         p.cindex = 0;
