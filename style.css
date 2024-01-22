@@ -26,6 +26,7 @@ section {
     grid-template-columns: 1fr;
     width: 100%;
     justify-items: center;
+    grid-row-gap: 50px;
 }
 
 #my-name {
