@@ -15,9 +15,9 @@ var sketchTwo = function (p) {
 
 
         p.position = p.createVector(0, 0);
-        p.position.set(p.width / 6, p.height / 2);
+        p.position.set(p.width / 20, p.height / 2);
 
-        p.velocity = p.createVector(2, 0.1);
+        p.velocity = p.createVector(0, 0.1);
 
         p.acceleration = p.createVector(0, 0.1);
 
@@ -76,7 +76,7 @@ let s1 = new p5(sketchTwo);
 var sketchOne = function (p) {
 
     p.setup = function () {
-        p.colors = ['#3498DB', '#16A085', '#F39C12', '#D35400', '#8E44AD'];
+        p.colors = ['#3498DB', '#16A085', '#F39C12', '#D35400', '#8E44AD','#DE3163','#CCCCFF','#E1C16E'];
         p.container = document.getElementById('welcome-anim');
         p.canvas = p.createCanvas(220,220);
         p.canvas.parent(p.container);
@@ -98,10 +98,16 @@ var sketchOne = function (p) {
 
         p.noStroke();
 
-        for (let i = 5; i < 10; i++) {
+        for (let i = 5; i < (5+ p.colors.length); i++) {
             p.fill(p.colors[i - 5]);
             p.rotate(p.radians(p.angle + p.step));
-            p.circle(p.width / i, p.height / i, 15);
+            p.circle(p.width / i, p.height / i, 12);
+            if(i == 5){
+                p.fill(p.colors[0]);
+                p.circle(p.width/5,- p.height/5,12);
+                p.circle(-p.width/5,p.height/5,12);
+                p.circle(-p.width/5,- p.height/5,12);
+            }
         }
         p.step = p.step + 1;
     }
