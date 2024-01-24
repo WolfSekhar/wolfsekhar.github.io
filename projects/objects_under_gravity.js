@@ -31,7 +31,7 @@ function setup() {
     cindex = 0;
 
     slider = createSlider(0,10,2);
-    slider.position(50,150);
+    slider.position(50,250);
     slider.size(200);
 
     for(let i = 0; i < 100; i++){
