@@ -22,7 +22,7 @@ var sketchTwo = function (p) {
         p.acceleration = p.createVector(0, 0.2);
 
         p.colors = ['black', '#7851a9', 'orange', '#1e90ff','#D35400', '#8E44AD','#DE3163','#CCCCFF','#E1C16E']
-        p.dot_radius = 25;
+        p.dot_radius = 35;
 
         p.cindex = 0;
 
@@ -81,7 +81,7 @@ var sketchOne = function (p) {
         p.canvas = p.createCanvas(220,220);
         p.canvas.parent(p.container);
         p.angle = 0;
-        p.step = 0.1;
+        p.step = 0.09;
         p.positionDevider = 1;
         p.frameRate(60);
     }
@@ -103,6 +103,16 @@ var sketchOne = function (p) {
             p.rotate(p.radians(p.angle + p.step));
             p.circle(p.width / i, p.height / i, 12);
             if(i == 5){
+                
+
+                p.strokeWeight(2);
+                p.stroke(0);
+                p.line(15,15,p.width/5,p.height/5);
+                p.line(0,0,p.width/5,- p.height/5);
+                p.line(0,0,-p.width/5,p.height/5);
+                p.line(0,0,-p.width/5,- p.height/5);
+    
+                p.noStroke();
                 p.fill(p.colors[0]);
                 p.circle(p.width/5,- p.height/5,12);
                 p.circle(-p.width/5,p.height/5,12);
@@ -125,13 +135,13 @@ let SketchChaos = function(p){
 
 
         p.canvas = p.createCanvas(p.chaosIdWidth, 170);
-        p.background(255);
+        p.background(250);
         p.canvas.parent(p.container);
         p.frameRate(60);
 
 
         p.position = p.createVector(0, 0);
-        p.position.set(p.width / 20, p.height / 2);
+        p.position.set(p.width / 2, p.height / 2);
 
         p.velocity = p.createVector(0, 0.1);
 
@@ -145,7 +155,7 @@ let SketchChaos = function(p){
     }
 
     p.draw = function () {
-        p.background(255);
+        p.background(250);
 
         dot(p.position.x, p.position.y, p.dot_radius, p.colors[p.cindex])
 
