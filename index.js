@@ -107,16 +107,16 @@ var sketchOne = function (p) {
 
                 p.strokeWeight(2);
                 p.stroke(0);
-                p.line(15, 15, p.width / 4, p.height / 4);
+                
                 p.line(0, 0, p.width / 4, - p.height / 4);
                 p.line(0, 0, -p.width / 4, p.height / 4);
                 p.line(0, 0, -p.width / 4, - p.height / 4);
 
                 p.noStroke();
                 p.fill(p.colors[0]);
-                p.circle(p.width / 4, - p.height / 4, 12);
-                p.circle(-p.width / 4, p.height / 4, 12);
-                p.circle(-p.width / 4, - p.height / 4, 12);
+                p.circle(p.width / 4, - p.height / 4, 30);
+                p.circle(-p.width / 4, p.height / 4, 30);
+                p.circle(-p.width / 4, - p.height / 4, 30);
             }
         }
         p.step = p.step + 0.5;
