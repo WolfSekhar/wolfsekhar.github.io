@@ -33,7 +33,7 @@ section {
     grid-template-columns: 1fr;
     width: 100%;
     justify-items: center;
-    row-gap: 20px;
+    row-gap: 40px;
 }
 
 #my-name {
