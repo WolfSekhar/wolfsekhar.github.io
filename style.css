@@ -3,7 +3,9 @@ body {
     background: linear-gradient(to bottom, #ffffff, #ffffff);
     font-family: 'Roboto';
 }
-
+p{
+    margin: 0px;
+}
 
 @font-face {
     font-family: 'ConcertOne';
@@ -16,7 +18,7 @@ body {
 }
 
 section {
-    margin-top: 10px;
+    margin-top: 2px;
 }
 
 /* ********************************************************* */
@@ -71,7 +73,7 @@ section {
 /* Section Welcome */
 /* ********************************************************* */
 #section-welcome{
-    margin-top: 10%;
+    margin-top: 2%;
     justify-items: center;
     display: grid;
 }
@@ -85,7 +87,7 @@ section {
 }
 
 #welcome-text {
-    font-size: 4vw;
+    font-size: 2vw;
     text-align: center;
 }
 
@@ -97,7 +99,7 @@ section {
 }
 
 #about-me{
-    font-size: 5vw;
+    font-size: 3vw;
     font-weight: bold;
     text-align: center;
 }
@@ -106,7 +108,7 @@ section {
     text-align: center;
     margin-top: 20px;
     font-size: larger;
-    font-size: 4vw;
+    font-size: 2vw;
 }
 /* ********************************************************* */
 /* Section Project */

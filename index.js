@@ -21,7 +21,7 @@ var sketchTwo = function (p) {
 
         p.acceleration = p.createVector(0, 0.2);
 
-        p.colors = ['black', '#7851a9', 'orange', '#1e90ff','#D35400', '#8E44AD','#DE3163','#CCCCFF','#E1C16E']
+        p.colors = ['black', '#7851a9', 'orange', '#1e90ff', '#D35400', '#8E44AD', '#DE3163', '#CCCCFF', '#E1C16E']
         p.dot_radius = 35;
 
         p.cindex = 0;
@@ -49,7 +49,7 @@ var sketchTwo = function (p) {
         p.fill(color);
         p.noStroke();
         //p.circle(x, y, radius);
-        p.square(x,y,radius/2);
+        p.square(x, y, radius / 2);
     }
 
     function motion() {
@@ -76,12 +76,12 @@ let s1 = new p5(sketchTwo);
 var sketchOne = function (p) {
 
     p.setup = function () {
-        p.colors = ['#3498DB', '#16A085', '#F39C12', '#D35400', '#8E44AD','#DE3163','#CCCCFF','#E1C16E'];
+        p.colors = ['#3498DB', '#16A085', '#F39C12', '#D35400', '#8E44AD', '#DE3163', '#CCCCFF', '#E1C16E'];
         p.container = document.getElementById('welcome-anim');
-        p.canvas = p.createCanvas(220,220);
+        p.canvas = p.createCanvas(p.windowWidth / 3, p.windowWidth / 3);
         p.canvas.parent(p.container);
         p.angle = 0;
-        p.step = 0.09;
+        p.step = 0.1;
         p.positionDevider = 1;
         p.frameRate(60);
     }
@@ -91,35 +91,38 @@ var sketchOne = function (p) {
 
         p.translate(p.width / 2, p.height / 2);
 
-    
+
         p.fill('#616A6B');
-        p.circle(0, 0, 30);
-        
+        p.circle(0, 0, 40);
+
 
         p.noStroke();
 
-        for (let i = 5; i < (5+ p.colors.length); i++) {
-            p.fill(p.colors[i - 5]);
+        for (let i = 4; i < (4 + p.colors.length); i++) {
+            p.fill(p.colors[i - 4]);
             p.rotate(p.radians(p.angle + p.step));
-            p.circle(p.width / i, p.height / i, 12);
-            if(i == 5){
-                
+            p.circle(p.width / i, p.height / i, 20);
+            if (i == 4) {
+
 
                 p.strokeWeight(2);
                 p.stroke(0);
-                p.line(15,15,p.width/5,p.height/5);
-                p.line(0,0,p.width/5,- p.height/5);
-                p.line(0,0,-p.width/5,p.height/5);
-                p.line(0,0,-p.width/5,- p.height/5);
-    
+                p.line(15, 15, p.width / 4, p.height / 4);
+                p.line(0, 0, p.width / 4, - p.height / 4);
+                p.line(0, 0, -p.width / 4, p.height / 4);
+                p.line(0, 0, -p.width / 4, - p.height / 4);
+
                 p.noStroke();
                 p.fill(p.colors[0]);
-                p.circle(p.width/5,- p.height/5,12);
-                p.circle(-p.width/5,p.height/5,12);
-                p.circle(-p.width/5,- p.height/5,12);
+                p.circle(p.width / 4, - p.height / 4, 12);
+                p.circle(-p.width / 4, p.height / 4, 12);
+                p.circle(-p.width / 4, - p.height / 4, 12);
             }
         }
-        p.step = p.step + 0.7;
+        p.step = p.step + 0.5;
+        if(p.step >= 360){
+            p.step = 0.1;
+        }
     }
 
 }
@@ -128,7 +131,7 @@ let s2 = new p5(sketchOne);
 
 
 // Chaos anim
-let SketchChaos = function(p){
+let SketchChaos = function (p) {
     p.setup = function () {
         p.container = document.getElementById('chaos-anim');
         p.chaosIdWidth = p.container.offsetWidth;

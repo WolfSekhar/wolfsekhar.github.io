@@ -34,10 +34,6 @@ function setup() {
     slider.position(50,250);
     slider.size(200);
 
-    for(let i = 0; i < 100; i++){
-        console.log(random(0.11,0.99));
-    }
-
 }
 
 function draw() {
@@ -116,7 +112,7 @@ function initialSetupValue(){
 
         position.push(createVector(0, 0));
         position[i].set(initialpositionIncrement, height/8);
-        console.log(initialpositionIncrement);
+
         initialpositionIncrement += positionIncrement;
 
         mass.push(random(0.05,2.0));
