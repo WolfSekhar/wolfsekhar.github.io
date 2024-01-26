@@ -122,7 +122,7 @@ function initialSetupValue(){
 
         acceleration.push(createVector(0, initialAcceleration  + mass[i] * 0.1 ));
         //initialAcceleration += accelStep;
-        particles_radius.push(mass[i] * 50);
+        particles_radius.push(mass[i] * 30);
     }
 
 }
