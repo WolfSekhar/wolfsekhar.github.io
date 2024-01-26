@@ -12,6 +12,7 @@ let button;
 
 
 function setup(){
+    
     createCanvas(windowWidth - 20,windowWidth/1.5);
     background(200);
     frameRate(60);
@@ -66,7 +67,7 @@ function draw(){
     fill(0);
     circle(position.x,position.y,objectRadius);
     text('(' + round(velocity.mag() * 10) + 'm/s)',position.x -5,position.y - 10);
-    text('Distance = (' + round(position.mag()) + 'm)',position.x - 5,position.y - 20);
+    text('Distance = (' + round(position.x) + 'm)',position.x - 5,position.y - 20);
     ground();
     pop();
     //***************************
