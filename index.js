@@ -101,7 +101,7 @@ var sketchOne = function (p) {
         for (let i = 4; i < (4 + p.colors.length); i++) {
             p.fill(p.colors[i - 4]);
             p.rotate(p.radians(p.angle + p.step));
-            p.circle(p.width / i, p.height / i, 20);
+            p.circle(p.width / i, p.height / i, 12);
             if (i == 4) {
 
 
