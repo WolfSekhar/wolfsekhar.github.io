@@ -6,6 +6,9 @@ body {
 p{
     margin: 0px;
 }
+.project-title{
+    font-size: 4vw;
+}
 
 @font-face {
     font-family: 'ConcertOne';
@@ -87,7 +90,7 @@ section {
 }
 
 #welcome-text {
-    font-size: 2vw;
+    font-size: 5vw;
     text-align: center;
 }
 
@@ -99,7 +102,7 @@ section {
 }
 
 #about-me{
-    font-size: 3vw;
+    font-size: 6vw;
     font-weight: bold;
     text-align: center;
 }
@@ -108,7 +111,7 @@ section {
     text-align: center;
     margin-top: 20px;
     font-size: larger;
-    font-size: 2vw;
+    font-size: 5vw;
 }
 /* ********************************************************* */
 /* Section Project */
