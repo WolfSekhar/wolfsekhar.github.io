@@ -84,12 +84,12 @@ function draw(){
 
 function move(){
     velocity.limit(velocityLimit);
-    position = position.add(velocity);
-    velocity = velocity.add(acceleration);
+    position.add(velocity);
+    velocity.add(acceleration);
 }
 
 function applyGravity(){
-    velocity = velocity.add(gravity);
+    velocity.add(gravity);
 }
 
 function bounce(){
