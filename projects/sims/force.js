@@ -1,0 +1,9 @@
+class Force{
+    constructor(){
+
+    }
+
+    run(){
+        
+    }
+}
