@@ -6,19 +6,21 @@ let radius;
 let colors;
 let charges;
 let chargesIndex;
+let numberOfCharges;
 
 function setup(){
-    createCanvas(windowWidth - 10,windowHeight/2);
+    createCanvas(windowWidth - 10,windowHeight * 0.9);
     background(255);
     frameRate(60);
-    createCharges();
+    
 
     chargesDirection = [];
     colors = ['red','blue'];
     charges = ['p','n'];
-    radius = 40;
-    chargesIndex = 2;
-
+    radius = 20;
+    chargesIndex = 1;
+    numberOfCharges = 50;
+    createCharges();
     
 
     
@@ -31,47 +33,46 @@ function draw(){
  
     push();
     translate(width/2,height/2);
-    for(let i = 0;i < 2;i++){
+    // nucleus
+    strokeWeight(3);
+    circle(0,0,width/2.5);
+
+    for(let i = 0;i < numberOfCharges;i++){
         noStroke();
-        if(chargesIndex == 0){
-            fill(colors[0]);
-            circle(chargesPosition[i].x,chargesPosition[i].y,radius);
-        }else if(chargesIndex == 1){
-            fill(colors[1]);
-            circle(chargesPosition[i].x,chargesPosition[i].y,radius);
-        }else{
-            fill(colors[i]);
-            circle(chargesPosition[i].x,chargesPosition[i].y,radius);
-            
-        }
+        fill(0);
+        circle(chargesPosition[i].x,chargesPosition[i].y,radius);
         
     }
     pop();
 
-    setDirection();
     move();
 
 }
 
+
 function move(){
-    if(chargesPosition[0].x != chargesPosition[1].x - radius ||
-        chargesPosition[0].y != chargesPosition[1].y ){
-            if(chargesIndex == 0 || chargesIndex == 1){
-                chargesPosition[0].sub(chargesDirection[0]);
-                chargesPosition[1].sub(p5.Vector.mult(chargesDirection[0],(-1)));
-            }else{
-                chargesPosition[0].add(chargesDirection[0]);
-                chargesPosition[1].add(p5.Vector.mult(chargesDirection[0],(-1)));
+    for(let i = 0;i < numberOfCharges;i++){
+        for(let j = 0;j < numberOfCharges;j++){
+            if(i != j){
+                let mover = p5.Vector.sub(chargesPosition[j],chargesPosition[i]);
+                mover.normalize();
+                mover.mult(0.05 );
+                chargesPosition[i].add(mover);
+                chargesPosition[i].set(round(chargesPosition[i].x,2),round(chargesPosition[i].y,2));
             }
-        
+            
+        }
     }
-    
+
 }
 
 function createCharges(){
     chargesPosition = [];
-    chargesPosition.push(createVector(-50,0));
-    chargesPosition.push(createVector(50,0));
+    for(let i =0;i< numberOfCharges;i++){
+        let temp1 = round(random(-500,500));
+        let temp2 = round(random(-500,500));
+        chargesPosition.push(createVector(temp1,temp2));
+    }
 }
 
 function setDirection(){
