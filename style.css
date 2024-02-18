@@ -1,24 +1,48 @@
+@font-face {
+    font-family: __agrandir_regular;
+    src: url(/font/Agrandir-Regular.otf);
+}
+
+@font-face {
+    font-family: __writer;
+    src: url(/font/writer.woff2);
+    
+}
+
+@font-face {
+    font-family: __coet_bold;
+    src: url(/font/coet-bold.otf);
+}
+
+html{
+    background-color: #F6F5F0;
+
+}
+
 body {
-    color: rgb(42, 39, 39);
-    background: linear-gradient(to bottom, #ffffff, #ffffff);
-    font-family: 'Roboto';
+    color: #4b5361;
+    font-family: '__writer';
+    background-color: #F6F5F0;
+    margin: 2%;
+    font-size: 6vw;
+    font-style: normal;
+    font-weight: 400;
 }
 p{
     margin: 0px;
-}
-.project-title{
-    font-size: 4vw;
+    background-color: #F6F5F0;
 }
 
-@font-face {
-    font-family: 'ConcertOne';
-    src: url(/library/ConcertOne-Regular.ttf);
+.headings{
+    font-family: '__agrandir_regular';
+    text-align: center;
+    font-size: 8vw;
+    color: #084ccf;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url(/library/Roboto-Regular.ttf);
-}
 
 section {
     margin-top: 2px;
@@ -28,7 +52,7 @@ section {
 /* Section Name */
 /* ********************************************************* */
 #section-name {
-    margin: 1%;
+    margin: 5%;
 }
 
 #title-container {
@@ -40,11 +64,10 @@ section {
 }
 
 #my-name {
-    color: rgb(49, 47, 47);
+    color: #084ccf;
     max-width: 100%;
-    font-size: 28vw;
-    font-family: 'ConcertOne', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
+    font-size: 20vw;
+    font-family: '__coet_bold','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #my-name-sub {
@@ -60,10 +83,8 @@ section {
 }
 
 #my-occupation {
-    font-size: 5vw;
-    font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: '__agrandir_regular';
     background-color: bisque;
-    font-weight: 500;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
@@ -90,7 +111,7 @@ section {
 }
 
 #welcome-text {
-    font-size: 5vw;
+    
     text-align: center;
 }
 
@@ -98,30 +119,37 @@ section {
 /* Section About */
 /* ********************************************************* */
 #section-about{
-    margin: 3%;   
+    margin-top: 5%;   
 }
 
 #about-me{
-    font-family: 'ConcertOne';
-    font-size: 6vw;
-    text-align: center;
+    
 }
 
 #about-text {
     text-align: center;
     margin-top: 20px;
-    font-size: larger;
-    font-size: 5vw;
 }
 /* ********************************************************* */
 /* Section Project */
 /* ********************************************************* */
 
-#section-project{
+#section-projects{
+    margin-top: 50px;
     
 }
 #project-container{
-    
+
+}
+.project-title{
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #DDE4ED;
+    color: #4b5361;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
 }
 .container{
     display: grid;
@@ -129,7 +157,9 @@ section {
     align-items: center;
     text-align: center;
     grid-row-gap: 5px;
+    margin-bottom: 30px;
 }
-#chaos-anim{
-    background-color: aquamarine;
+.project-thumbnail{
+    max-width: 90%;
+    border-radius: 10px;
 }

@@ -9,7 +9,7 @@ var sketchTwo = function (p) {
 
 
         p.canvas = p.createCanvas(170, p.mySubNameHeight / 1.2);
-        p.background(255);
+        p.background('#F6F5F0');
         p.canvas.parent(p.container);
         p.frameRate(60);
 
@@ -29,7 +29,7 @@ var sketchTwo = function (p) {
     }
 
     p.draw = function () {
-        p.background(255);
+        p.background('#F6F5F0');
 
         dot(p.position.x, p.position.y, p.dot_radius, p.colors[p.cindex])
 
@@ -87,7 +87,7 @@ var sketchOne = function (p) {
     }
 
     p.draw = function () {
-        p.background(255);
+        p.background('#F6F5F0');
 
         p.translate(p.width / 2, p.height / 2);
 
