@@ -42,7 +42,10 @@ p{
     margin-top: 30px;
     margin-bottom: 10px;
 }
-
+h6{
+    font-style: normal;
+    font-weight: 400;
+}
 
 section {
     margin-top: 2px;
