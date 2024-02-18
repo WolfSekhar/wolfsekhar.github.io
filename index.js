@@ -93,7 +93,7 @@ var sketchOne = function (p) {
 
 
         p.fill('#616A6B');
-        p.circle(0, 0, 40);
+        p.circle(0, 0, 10);
 
 
         p.noStroke();
@@ -108,9 +108,9 @@ var sketchOne = function (p) {
                 p.strokeWeight(2);
                 p.stroke(0);
                 
-                p.line(0, 0, p.width / 4, - p.height / 4);
-                p.line(0, 0, -p.width / 4, p.height / 4);
-                p.line(0, 0, -p.width / 4, - p.height / 4);
+                //p.line(0, 0, p.width / 4, - p.height / 4);
+                //p.line(0, 0, -p.width / 4, p.height / 4);
+                //p.line(0, 0, -p.width / 4, - p.height / 4);
 
                 p.noStroke();
                 p.fill(p.colors[0]);
