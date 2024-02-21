@@ -69,7 +69,7 @@ var sketchTwo = function (p) {
     }
 }
 
-let s1 = new p5(sketchTwo);
+//let s1 = new p5(sketchTwo);
 
 
 // this is for the atom animation
