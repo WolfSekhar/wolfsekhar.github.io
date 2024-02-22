@@ -19,6 +19,11 @@ html{
 
 }
 
+nav{
+    float: right;
+    list-style: none;
+}
+
 body {
     color: #4b5361;
     font-family: '__writer';
