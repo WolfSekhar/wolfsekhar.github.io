@@ -20,7 +20,7 @@ function setup() {
     step = [];
 
     speed = [3,2,1,0.8,0.5,0.4,0.3,0.2,0.1,0.05];
-    colors = ['black', '#7851a9', 'orange', '#1e90ff', '#E1C16E','#D35400', '#8E44AD', '#DE3163', '#CCCCFF' ];
+    colors = ['black', '#7851a9', 'orange', '#1e90ff', '#E1C16E','#D35400', '#8E44AD', '#DE3163', '#CCCCFF','pink'];
 
     for (let i = 0; i < noOfOrbits; i++) {
         orbitLocation.push(createVector(30 * (i+1), 0));
