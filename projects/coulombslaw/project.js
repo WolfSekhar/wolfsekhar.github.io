@@ -20,7 +20,7 @@ function preload(){
 }
 
 function setup() {
-    canvas = new Canvas(400, 400);
+    canvas = new Canvas(windowWidth - 20, windowHeight/1.8);
 
     chargeRadius = 30;
 
