@@ -19,7 +19,7 @@ p5.prototype.registerMethod('init', function p5playInit() {
 		typeof process == 'undefined' // don't track in node.js
 	) {
 		let script = document.createElement('script');
-		script.src = 'https://www.googletagmanager.com/gtag/js?id=G-EHXNCTSYLK';
+		script.src = 'https://www.googletagmanager.com/';
 		script.async = true;
 		document.head.append(script);
 		window._p5play_gtagged = true;
