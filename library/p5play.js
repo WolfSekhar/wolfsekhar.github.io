@@ -7996,7 +7996,7 @@ p5.prototype.registerMethod('init', function p5playInit() {
 				) {
 					break;
 				}
-				playIntro();
+
 		}
 	}
 
