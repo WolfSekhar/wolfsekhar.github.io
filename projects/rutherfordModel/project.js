@@ -47,8 +47,10 @@ function draw(){
     if(frameCount % 5 == 0){
         IsToStore = true;
     } 
-    if(frameCount % 30   == 0){
+    if(frameCount % 10   == 0){
+        for(let i = 0;i < 5;i++){
         path.shift();
+        }
     }
 
     for(let i = 0;i < alphaSprite.length;i++){

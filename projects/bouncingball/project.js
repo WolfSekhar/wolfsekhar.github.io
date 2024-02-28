@@ -20,7 +20,7 @@ function setup() {
     initialValues();
     
 
-    slider = createSlider(1,10,5);
+    slider = createSlider(1,100,5);
 
 }
 
