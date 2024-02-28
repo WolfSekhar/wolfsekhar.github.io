@@ -80,15 +80,18 @@ var sketchOne = function (p) {
         p.container = document.getElementById('welcome-anim');
         p.canvas = p.createCanvas(p.windowWidth / 3, p.windowWidth / 3);
         p.canvas.parent(p.container);
-        p.numberOfElec = 20;
+        p.numberOfElec = 30;
         p.angle = 0;
+        p.rangle = 0;
         p.step = 0.1;
         p.positionDevider = 1;
         p.frameRate(60);
-        p.randomSize = []
+        p.randomSize = [];
+        p.locations = [];
         for (let i = 0; i < (p.numberOfElec); i++){
             p.randomSize.push(p.round(p.random(2,10)));
-        }
+            p.locations.push([ p.width / p.random(4,8),p.height / p.random(4,8)]);
+        }   
         
     }
 
@@ -99,7 +102,7 @@ var sketchOne = function (p) {
 
 
         p.fill('#616A6B');
-        p.circle(p.random(-1,1), p.random(-1,1), 20);
+        p.circle(0,0, 20);
 
 
         p.noStroke();
@@ -107,7 +110,7 @@ var sketchOne = function (p) {
         for (let i = 0; i < (p.numberOfElec); i++) {
             p.fill(p.colors[0]);
             p.rotate(p.radians(p.angle + p.step));
-            p.circle(p.width / 4, p.height / 4,p.randomSize[i]);
+            p.circle(p.locations[i][0],p.locations[i][1],p.randomSize[i]);
         }
 
         p.strokeWeight(2);
@@ -119,14 +122,14 @@ var sketchOne = function (p) {
 
         p.noStroke();
         p.fill(p.colors[0]);
-        p.circle(p.width / 4, - p.height / 4, 30);
-        p.circle(-p.width / 4, p.height / 4, 30);
-        p.circle(-p.width / 4, - p.height / 4, 30);
-        p.circle(p.width / 4,  p.height / 4, 30);
+        p.circle(p.width / 4, - p.height / 4, 20);
+        p.circle(-p.width / 4, p.height / 4, 20);
+        p.circle(-p.width / 4, - p.height / 4, 20);
+        p.circle(p.width / 4,  p.height / 4, 20);
 
 
 
-        p.step = p.step + 0.1;
+        p.step = p.step + 0.05;
         if(p.step >= 360){
             p.step = 0.1;
         }
