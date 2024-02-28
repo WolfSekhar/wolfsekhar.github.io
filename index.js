@@ -80,46 +80,53 @@ var sketchOne = function (p) {
         p.container = document.getElementById('welcome-anim');
         p.canvas = p.createCanvas(p.windowWidth / 3, p.windowWidth / 3);
         p.canvas.parent(p.container);
+        p.numberOfElec = 20;
         p.angle = 0;
         p.step = 0.1;
         p.positionDevider = 1;
         p.frameRate(60);
+        p.randomSize = []
+        for (let i = 0; i < (p.numberOfElec); i++){
+            p.randomSize.push(p.round(p.random(2,10)));
+        }
+        
     }
 
     p.draw = function () {
         p.background('#F6F5F0');
-
+        
         p.translate(p.width / 2, p.height / 2);
 
 
         p.fill('#616A6B');
-        p.circle(0, 0, 10);
+        p.circle(p.random(-1,1), p.random(-1,1), 20);
 
 
         p.noStroke();
 
-        for (let i = 4; i < (4 + p.colors.length); i++) {
-            p.fill(p.colors[i - 4]);
+        for (let i = 0; i < (p.numberOfElec); i++) {
+            p.fill(p.colors[0]);
             p.rotate(p.radians(p.angle + p.step));
-            p.circle(p.width / i, p.height / i, 12);
-            if (i == 4) {
-
-
-                p.strokeWeight(2);
-                p.stroke(0);
-                
-                //p.line(0, 0, p.width / 4, - p.height / 4);
-                //p.line(0, 0, -p.width / 4, p.height / 4);
-                //p.line(0, 0, -p.width / 4, - p.height / 4);
-
-                p.noStroke();
-                p.fill(p.colors[0]);
-                p.circle(p.width / 4, - p.height / 4, 30);
-                p.circle(-p.width / 4, p.height / 4, 30);
-                p.circle(-p.width / 4, - p.height / 4, 30);
-            }
+            p.circle(p.width / 4, p.height / 4,p.randomSize[i]);
         }
-        p.step = p.step + 0.5;
+
+        p.strokeWeight(2);
+        p.stroke(0);
+        
+        //p.line(0, 0, p.width / 4, - p.height / 4);
+        //p.line(0, 0, -p.width / 4, p.height / 4);
+        //p.line(0, 0, -p.width / 4, - p.height / 4);
+
+        p.noStroke();
+        p.fill(p.colors[0]);
+        p.circle(p.width / 4, - p.height / 4, 30);
+        p.circle(-p.width / 4, p.height / 4, 30);
+        p.circle(-p.width / 4, - p.height / 4, 30);
+        p.circle(p.width / 4,  p.height / 4, 30);
+
+
+
+        p.step = p.step + 0.1;
         if(p.step >= 360){
             p.step = 0.1;
         }

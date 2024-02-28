@@ -42,7 +42,7 @@ p{
     font-family: '__agrandir_regular';
     text-align: center;
     font-size: 8vw;
-    color: #084ccf;
+    color: #3498DB;
     font-weight: 600;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -60,7 +60,7 @@ section {
 /* Section Name */
 /* ********************************************************* */
 #section-name {
-    margin: 5%;
+    margin: 1%;
 }
 
 #title-container {
@@ -68,11 +68,11 @@ section {
     grid-template-columns: 1fr;
     width: 100%;
     justify-items: center;
-    row-gap: 40px;
+    row-gap: 20px;
 }
 
 #my-name {
-    color: #084ccf;
+    color: #3498DB;
     max-width: 100%;
     font-size: 20vw;
     font-family: '__coet_bold','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -105,7 +105,7 @@ section {
 /* Section Welcome */
 /* ********************************************************* */
 #section-welcome{
-    margin-top: 2%;
+    margin: 1%;
     justify-items: center;
     display: grid;
 }
@@ -120,7 +120,7 @@ section {
 
 #welcome-text {
     
-    text-align: center;
+    text-align:center;
 }
 
 /* ********************************************************* */
