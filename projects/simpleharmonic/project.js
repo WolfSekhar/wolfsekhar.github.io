@@ -43,12 +43,12 @@ function draw(){
 
 
     fill(0);
-    stroke(1);
+    stroke(0);
     strokeWeight(0.5);
     text("Mean position",-30,50);
     text("Maximum Velocity ",-30,30);
     circle(0,0,5);
-    fill(255);
+
 
     text('a: ' + round(acceleration.x,2),object.x - 30,-30);
 
