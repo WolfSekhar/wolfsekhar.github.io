@@ -13,9 +13,9 @@ let myCurve = [];
 
 function setup(){
     canvas = new Canvas(windowWidth - 30,windowHeight/1.6);
-    pg = createGraphics(windowWidth - 30,height/2);
+    pg = createGraphics(windowWidth - 30,height/1.9);
     pg.background(0);
-    frameRate(60);
+    frameRate(24);
 
     position = createVector(0,0);
     velocity = createVector(0,0);
@@ -35,7 +35,7 @@ function setup(){
 }
 
 function draw(){
-    background(255);
+    clear();
     //pg.background(0);
     translate(width/2,height/4);
 
@@ -51,6 +51,7 @@ function draw(){
 
 
     text('a: ' + round(acceleration.x,2),object.x - 30,-30);
+    text('x: ' + round(object.x,2),object.x - 30,-45);
 
     move();
     line(0,0,0,-height/2);
