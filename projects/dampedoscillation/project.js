@@ -8,6 +8,7 @@ let position;
 
 let pg;
 
+
 let counter = 0;
 let myCurve = [];
 
@@ -66,6 +67,7 @@ function move(){
 
     if(object.x >= 0){
         acceleration.sub(friction);
+        object.x = object.x -0.5;
     }else{
         acceleration.add(friction);
     }
