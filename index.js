@@ -89,8 +89,8 @@ var sketchOne = function (p) {
         p.randomSize = [];
         p.locations = [];
         for (let i = 0; i < (p.numberOfElec); i++){
-            p.randomSize.push(p.round(p.random(2,10)));
-            p.locations.push([ p.width / p.random(4,8),p.height / p.random(4,8)]);
+            p.randomSize.push(p.round(p.random(8,14)));
+            p.locations.push([ p.width / p.random(4,10),p.height / p.random(4,10)]);
         }   
         
     }
@@ -108,7 +108,7 @@ var sketchOne = function (p) {
         p.noStroke();
 
         for (let i = 0; i < (p.numberOfElec); i++) {
-            p.fill(p.colors[0]);
+            p.fill(p.colors[5]);
             p.rotate(p.radians(p.angle + p.step));
             p.circle(p.locations[i][0],p.locations[i][1],p.randomSize[i]);
         }
@@ -121,13 +121,15 @@ var sketchOne = function (p) {
         //p.line(0, 0, -p.width / 4, - p.height / 4);
 
         p.noStroke();
+
+
         p.fill(p.colors[0]);
         p.circle(p.width / 4, - p.height / 4, 20);
         p.circle(-p.width / 4, p.height / 4, 20);
         p.circle(-p.width / 4, - p.height / 4, 20);
         p.circle(p.width / 4,  p.height / 4, 20);
 
-
+    
 
         p.step = p.step + 0.05;
         if(p.step >= 360){

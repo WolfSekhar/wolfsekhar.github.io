@@ -1,3 +1,7 @@
+
+
+
+
 @font-face {
     font-family: __agrandir_regular;
     src: url(/font/Agrandir-Regular.otf);
@@ -33,6 +37,8 @@ body {
     font-style: normal;
     font-weight: 400;
 }
+
+
 p{
     margin: 0px;
     background-color: #F6F5F0;
@@ -170,4 +176,32 @@ section {
 .project-thumbnail{
     max-width: 90%;
     border-radius: 10px;
+}
+
+
+/* Styles for screens between 601px and 1400px */
+@media screen and (min-width: 601px) and (max-width: 1400px) {
+    body {
+        font-size: 3vw;
+    }
+    .div-side-by-side{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #my-name{
+        font-size: 12vw;
+    }
+    #my-name-sub{
+
+    }
+    #dot{
+
+    }
+    #my-occupation{
+        font-size: 4vw;
+    }
+    #welcome-text{
+        font-size: 2vw;
+    }
+
 }
