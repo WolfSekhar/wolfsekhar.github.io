@@ -80,18 +80,14 @@ var sketchOne = function (p) {
         p.container = document.getElementById('welcome-anim');
         p.canvas = p.createCanvas(p.windowWidth / 3, p.windowWidth / 3);
         p.canvas.parent(p.container);
-        p.numberOfElec = 30;
         p.angle = 0;
         p.rangle = 0;
-        p.step = 0.1;
-        p.positionDevider = 1;
+        p.step = 0;
+        p.fluctuate = 0;
+        p.invert = 1;
+        
         p.frameRate(60);
-        p.randomSize = [];
-        p.locations = [];
-        for (let i = 0; i < (p.numberOfElec); i++){
-            p.randomSize.push(p.round(p.random(8,14)));
-            p.locations.push([ p.width / p.random(4,10),p.height / p.random(4,10)]);
-        }   
+        
         
     }
 
@@ -100,40 +96,52 @@ var sketchOne = function (p) {
         
         p.translate(p.width / 2, p.height / 2);
 
-
+        // central circle grey
         p.fill('#616A6B');
-        p.circle(0,0, 20);
+        p.circle(0,0, 50);
 
-
-        p.noStroke();
-
-        for (let i = 0; i < (p.numberOfElec); i++) {
-            p.fill(p.colors[5]);
-            p.rotate(p.radians(p.angle + p.step));
-            p.circle(p.locations[i][0],p.locations[i][1],p.randomSize[i]);
-        }
-
-        p.strokeWeight(2);
+        // orbit circle
+        p.noFill();
         p.stroke(0);
-        
-        //p.line(0, 0, p.width / 4, - p.height / 4);
-        //p.line(0, 0, -p.width / 4, p.height / 4);
-        //p.line(0, 0, -p.width / 4, - p.height / 4);
+        p.strokeWeight(1);
+        p.circle(0,0,(p.width*2/4));
 
         p.noStroke();
 
-
+        p.push();
+        //rotate the outer blue circle
+        p.rotate(p.radians(p.angle + p.step));
         p.fill(p.colors[0]);
-        p.circle(p.width / 4, - p.height / 4, 20);
-        p.circle(-p.width / 4, p.height / 4, 20);
-        p.circle(-p.width / 4, - p.height / 4, 20);
-        p.circle(p.width / 4,  p.height / 4, 20);
+        p.circle(p.width /4 + p.fluctuate, 0, 40);
+        p.fill(0);
+        p.circle(p.width /4 + p.fluctuate, 0, 10);
+        p.pop();
 
-    
+        p.push();
+        //rotate the outer blue circle
+        p.rotate(p.radians(p.angle + p.step));
+        p.fill(p.colors[0]);
+        p.circle(-p.width /4 + p.fluctuate, 0, 40);
+        p.fill(0);
+        p.circle(-p.width /4 + p.fluctuate, 0, 10)
+        p.pop();
 
-        p.step = p.step + 0.05;
+        // opaque layer
+        p.fill(p.color(246, 245, 240,80));
+        p.circle(0,0,(p.width*2/4));
+
+
+        p.step = p.step + 0.7;
         if(p.step >= 360){
             p.step = 0.1;
+        }
+
+        // Fluctuation logic
+        p.fluctuate = p.fluctuate + 0.1 * (p.invert);
+        if(p.fluctuate > 30){
+            p.invert = -1;
+        }if(p.fluctuate < -30){
+            p.invert = 1;
         }
     }
 
