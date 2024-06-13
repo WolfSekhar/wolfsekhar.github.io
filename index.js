@@ -98,7 +98,7 @@ var sketchOne = function (p) {
 
         // central circle grey
         p.fill('#616A6B');
-        p.circle(0,0, 50);
+        p.circle(0,0, 30);
 
         // orbit circle
         p.noFill();
