@@ -8,9 +8,26 @@
     <script src="/library/p5.min.js"></script>
     <script src="/library/p5playv1.min.js"></script>
     <script src="project.js"></script>
+    <link rel="stylesheet" href="/projects/template/project.css">
 </head>
 <body>
-    <h5>Title Here</h5>
-    <h6>Info about the project</h6>
+    <h5 style="margin-bottom: 0px;">Title Here</h5>
+    <h6 style="margin-top: 0px;margin-bottom: 0px;">Info about the project</h6>
+
+    <div class="project-parent-div">
+        <div id="project-animation-div" class="project-child-div" 
+        style="flex-grow: 2;background-color: blanchedalmond;"></div>
+
+        <div class="project-child-div" style="flex-grow: 1;">
+
+            <div id="project-graph-div" class="project-sub-child-div" style="background-color: beige;"> 
+                <!-- Graph Area -->
+            </div>
+            <div id="project-controls-div" class="project-sub-child-div" style="background-color: cadetblue;">
+                <!-- Controls Area -->
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
