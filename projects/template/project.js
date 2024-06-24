@@ -6,6 +6,7 @@ class MyCanvas {
     setCanvas(containerElement, processing) {
         let animationContainer;
         let animationContainerX, animationContainerY;
+        try {
         animationContainer = document.getElementById(containerElement);
         animationContainerX = animationContainer.offsetWidth;
         animationContainerY = animationContainer.offsetHeight;
@@ -13,6 +14,10 @@ class MyCanvas {
         animationContainer.style.flex = 'none';
         animationContainer.style.height = animationContainerY;
         animationContainer.style.width = animationContainerX;
+        } catch (error) {
+           console.log(error); 
+        }
+        
     }
 }
 
@@ -24,12 +29,13 @@ function animationSketch(processing) {
     // write logic below
     processing.setup = function () {
         new MyCanvas().setCanvas('project-animation-div', processing);
-
+        
+       
         processing.background(255);
     }
 
     processing.draw = function () {
-        processing.text('Animation', processing.width / 2, processing.height / 2);
+        //processing.text('Animation', processing.width / 2, processing.height / 2);
 
     }
 
@@ -78,3 +84,4 @@ function controlSketch(processing) {
 new p5(animationSketch);
 new p5(graphSketch);
 new p5(controlSketch);
+
