@@ -33,9 +33,36 @@ function animationSketch(processing) {
        
         processing.background(255);
     }
-
+    let x = 0;
+    let ylimiter=0;
     processing.draw = function () {
-        processing.text('Animation', processing.width / 2, processing.height / 2);
+        processing.fill(0);
+        processing.stroke(0);
+        processing.translate(0,150);
+        processing.line(0,0,processing.width,0);
+        processing.circle(x,-75 *processing.sin(x *3),7);
+
+        processing.fill('green');
+        processing.stroke('green');
+        processing.translate(0,200);
+        processing.line(0,0,processing.width,0);
+        processing.circle(x,-75 *processing.cos(x *3),7);
+
+
+        processing.fill('red');
+        processing.stroke('red');
+        processing.translate(0,200);
+        processing.line(0,0,processing.width,0);
+        ylimiter = 75 *processing.tan(x *3);
+        if(ylimiter<100 && ylimiter>-100){
+            processing.circle(x,-ylimiter,7);
+        }
+        
+        x+=0.5;
+        if(x>processing.width){
+            x = 0;
+            processing.background(255);
+        }
 
     }
 
@@ -82,6 +109,6 @@ function controlSketch(processing) {
 /************************************************************************************************************/
 
 new p5(animationSketch);
-new p5(graphSketch);
-new p5(controlSketch);
+// new p5(graphSketch);
+// new p5(controlSketch);
 

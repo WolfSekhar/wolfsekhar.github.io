@@ -1,0 +1,39 @@
+body{
+    margin-top: 0px;
+}
+
+.project-parent-div{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
+.project-child-div{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.project-sub-child-div{
+    flex-grow: 1;
+    margin-top: 2px;
+}
+
+/* Styles for screens between 601px and 1400px */
+@media screen and (min-width: 601px){
+    .project-parent-div{
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        height: 85%;
+    }
+    
+    .project-child-div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-sub-child-div{
+        
+    }
+}
